@@ -17,12 +17,16 @@ const Sidebar = () => {
 
   return (
     <div className="nav-bar">
-      <Link className="logo" to="/home">
+      <Link className="logo" to="/">
         <img src={LogoS} alt="Logo" />
         <img className="sub-logo" src={LogoSubtitle} alt="Andrew Yang" />
       </Link>
       <nav>
-        <NavLink exact="true" activeclassname="false" to="/">
+        <NavLink 
+          exact="true" 
+          activeclassname="active" 
+          to="/"
+        >
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </NavLink>
         <NavLink 

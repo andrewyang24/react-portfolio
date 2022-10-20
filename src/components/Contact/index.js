@@ -3,6 +3,7 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import './index.scss'
 
 const Contact = () => {
@@ -44,9 +45,7 @@ const Contact = () => {
                         />
                     </h1>
                     <p>
-                        I am interested in freelance opportunities - especially on ambitious
-                        or large projects. However, if you have any other requests or
-                        questions, don't hesitate to contact me using below form either.
+                        I am interested in internship opportunities in software engineering, web development, and data science. Feel free to contact me using below form.
                     </p>
                     <div className="contact-form">
                         <form ref={form} onSubmit={sendEmail}>
@@ -83,6 +82,24 @@ const Contact = () => {
                         </ul>
                         </form>
                     </div>
+                </div>
+                <div className="info-map">
+                    Andrew Yang,
+                    <br />
+                    United States,
+                    <br />
+                    3024 Sentinel Ferry Ln 
+                    <br />
+                    <br />
+                    <span>andrewyueyang@gmail.com</span>
+                </div>
+                <div className="map-wrap">
+                    <MapContainer center={[35.808083, -78.921649]} zoom={14}>
+                        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                        <Marker position={[35.808083, -78.921649]}>
+                        <Popup>Andrew codes here :)</Popup>
+                        </Marker>
+                    </MapContainer>
                 </div>
             </div>
             <Loader type="pacman" />

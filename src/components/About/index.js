@@ -1,5 +1,7 @@
 import AnimatedLetters from '../AnimatedLetters'
 import Loader from 'react-loaders'
+import Timeline from '../Timeline'
+import "./index.scss"
 
 
 const About = () => {
@@ -28,11 +30,14 @@ const About = () => {
               I am always looking for relevant experience, as well as making a lasting impact on people and society.
               </p>
             </div>
-        </div>
+            <div className="timeline-wrap">
+              <Timeline />
+            </div>
+          </div>
+        
         <Loader type="pacman" />
         </>
     )
 }
-
 
 export default About

@@ -120,17 +120,19 @@
   
   @media screen and (max-width: 1200px) {
     .page {
-      position: initial;
+      position: relative;
+      max-width:100%;
     }
   
     .container {
-      position: initial;
+      position: relative;
       height: auto;
       min-height: auto;
+      max-width:100%;
   
       &.contact-page,
-      &.about-page,
-      &.portfolio-page {
+      &.about-page {
+
         .text-zone {
           position: initial;
           transform: none;
@@ -156,12 +158,5 @@
           max-width: calc(50% - 10px);
         }
       }
-    }
-  
-    .stage-cube-cont {
-      position: initial;
-      width: 100%;
-      height: 0%;
-      overflow: visible;
     }
   }

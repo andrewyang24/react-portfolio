@@ -30,6 +30,7 @@ const Sidebar = () => {
           exact="true" 
           activeclassname="active" 
           to="/"
+          onClick={() => setShowNav(false)}
         >
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </NavLink>
@@ -38,6 +39,7 @@ const Sidebar = () => {
           activeclassname="active"
           className="about-link"
           to="/about"
+          onClick={() => setShowNav(false)}
         >
           <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
         </NavLink>
@@ -46,6 +48,7 @@ const Sidebar = () => {
           activeclassname="active"
           className="contact-link"
           to="/contact"
+          onClick={() => setShowNav(false)}
         >
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </NavLink>
